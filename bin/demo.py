@@ -340,7 +340,7 @@ if __name__ == "__main__":
     jenkins_url = '{}service/{}/'.format(dcos_url, jenkins_name)
 
     config_dcos_cli(dcos_url)
-    check_and_set_token(dcos_url)
+    #check_and_set_token(dcos_url)
 
     try:
         if arguments['install']:
