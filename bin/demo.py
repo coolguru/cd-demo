@@ -185,7 +185,9 @@ def strip_to_hostname(url):
 
 def get_branch():
     branch = subprocess.check_output(['git','rev-parse', '--abbrev-ref', 'HEAD'])
-    return str(branch, 'utf-8').strip()
+    branch_name = str(branch, 'utf-8').strip()
+    #print('**** ' + branch_name)
+    return branch_name
 
 def update_and_push_marathon_json(elb_url, branch):
     elb_hostname = strip_to_hostname(elb_url)
